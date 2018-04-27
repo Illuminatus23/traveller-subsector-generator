@@ -552,6 +552,7 @@ JRPG = {
             var stars = JRPG.systemData.stars;
             $.each(stars, function(hex, star) {
                 JRPG.Methods.drawStar(star);
+                JRPG.Methods.drawPorts(star);
                 if (star.navybase === 'N') {
 
                 }
@@ -628,6 +629,22 @@ JRPG = {
         },
         drawNavybases : function(planetData) {
 
+        },
+        drawPorts: function (planetData) {
+            var map = Snap('#starMap');
+            var columnBase = planetData.position.column - 1;
+            var rowBase = planetData.position.row - 1;
+            var drawBaseY = 101,
+                drawBaseX = 39;
+            if (columnBase % 2 == 0) {
+                drawBaseY = 62.3538290724796;
+            }
+            map.text(drawBaseX, drawBaseY, planetData.starport).attr({
+                'text-achor' : 'middle',
+                'font-family' : 'Helvetica',
+                'font-size': '21.6',
+                'fill' : '#DDDDDD'
+            });
         },
         worldDataDisplay: function () {
             var description = JRPG.Data.statDescriptors;
