@@ -554,13 +554,13 @@ JRPG = {
                 JRPG.Methods.drawStar(star);
                 JRPG.Methods.drawPorts(star);
                 if (star.navybase === 'N') {
-
+                    JRPG.Methods.drawNavybases(star);
                 }
                 if (star.scoutbase === 'S') {
-
+                    JRPG.Methods.drawScoutBases(star);
                 }
                 if (star.gasgiant) {
-
+                    JRPG.Methods.drawGasGiants(star);
                 }
             });
         },
@@ -628,22 +628,98 @@ JRPG = {
             map.circle(drawX + 6, drawY - 2, .5).attr(attributes);
         },
         drawNavybases : function(planetData) {
+            var map = Snap('#starMap');
+            var columnBase = planetData.position.column - 1;
+            var rowBase = planetData.position.row - 1;
+            var drawBaseY = 98,
+                drawBaseX = 40;
+            var drawX = 0,
+                drawY = 0;
+            var drawString = '';
+            if (columnBase % 2 == 0) {
+                drawBaseY = 36;
+            }
+            drawX = drawBaseX + (108 * columnBase);
+            drawY = drawBaseY + (124 * rowBase);
+            drawString = 'M '+drawX+' '+ drawY+
+                ' L '+(drawX+7).toString()+' '+(drawY+18).toString()+
+                ' L '+(drawX-9).toString()+' '+(drawY+7).toString()+
+                ' L '+(drawX+10).toString()+' '+(drawY+7).toString()+
+                ' L '+(drawX-6).toString()+' '+(drawY+18).toString()+
+                ' L '+drawX+' '+drawY;
 
+            map.path(drawString).attr({
+                'stroke': '#0099FF',
+                'stroke-width' : '1',
+                'fill' : '#0099FF',
+                'data-hex': planetData.position.cellname
+            });
         },
         drawPorts: function (planetData) {
             var map = Snap('#starMap');
             var columnBase = planetData.position.column - 1;
             var rowBase = planetData.position.row - 1;
             var drawBaseY = 101,
-                drawBaseX = 39;
+                drawBaseX = 65;
+            var drawX = 0,
+                drawY = 0;
+
             if (columnBase % 2 == 0) {
-                drawBaseY = 62.3538290724796;
+                drawBaseY = 38;
             }
-            map.text(drawBaseX, drawBaseY, planetData.starport).attr({
+            drawX = drawBaseX + (108 * columnBase);
+            drawY = drawBaseY + (124.7076581449594 * rowBase);
+            map.text(drawX, drawY, planetData.starport).attr({
                 'text-achor' : 'middle',
                 'font-family' : 'Helvetica',
                 'font-size': '21.6',
                 'fill' : '#DDDDDD'
+            });
+        },
+        drawScoutBases: function (planetData) {
+            var map = Snap('#starMap');
+            var columnBase = planetData.position.column - 1;
+            var rowBase = planetData.position.row - 1;
+            var drawBaseY = 141,
+                drawBaseX = 42;
+            var drawX = 0,
+                drawY = 0;
+            var drawString;
+
+            if (columnBase % 2 == 0) {
+                drawBaseY = 78;
+            }
+            drawX = drawBaseX + (108 * columnBase);
+            drawY = drawBaseY + (124.7076581449594 * rowBase);
+            drawString = 'M '+drawX+' '+ drawY+
+                ' L '+(drawX+6).toString()+' '+(drawY+11).toString()+
+                ' L '+(drawX-6).toString()+' '+(drawY+11).toString()+
+                ' L '+drawX+' '+drawY;
+            map.path(drawString).attr({
+                'stroke': '#F4F339',
+                'stroke-width' : '1',
+                'fill' : '#F4F339',
+                'data-hex': planetData.position.cellname
+            });
+        },
+        drawGasGiants: function (planetData) {
+            var map = Snap('#starMap');
+            var columnBase = planetData.position.column - 1;
+            var rowBase = planetData.position.row - 1;
+            var drawBaseY = 107,
+                drawBaseX = 106;
+            var drawX = 0,
+                drawY = 0;
+
+            if (columnBase % 2 == 0) {
+                drawBaseY = 45;
+            }
+            drawX = drawBaseX + (108 * columnBase);
+            drawY = drawBaseY + (124 * rowBase);
+            map.circle(drawX, drawY, 5.16).attr({
+                'fill': '#D257B2',
+                'stroke': '#D257B2',
+                'stroke-width' : '2'
             });
         },
         worldDataDisplay: function () {
