@@ -1,0 +1,71 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <title>System Data</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Audiowide|Ubuntu+Mono' rel='stylesheet' type='text/css'>
+        <link href='css/worldGenerator.css' rel='stylesheet' type='text/css'>
+
+        <script src="js/jrpg.core.js"></script>
+        <script src="js/jrpg.data.js"></script>
+        <style type="text/css">
+            ul {
+                marging: 0;
+                padding: 0;
+            }
+            ul li {
+                text-indent: -25px;
+                padding-left: 25px;
+                list-style: none;
+            }
+            label {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body style="background-color:#000000; color:#AFEEEE; font-family:Arial, Helvetica, serif">
+        <div id="worldDataDetailsWrapper">
+            <h2>NAME</h2>
+            <ul>
+                <li>
+                <label>Starport Class:</label> STARPORT
+            </li>
+            <li>
+                <label>Imperial pressence:</label> BASES
+            </li>
+            <li>
+                <label>Gas Giant:</label> GASGIANT
+            </li>
+            <li>
+                <label>Planet circumference:</label> SIZE
+            </li>
+            <li>
+                <label>Atmosphere:</label> ATMOS
+            </li>
+            <li>
+                <label>Hydrosphere:</label> HYDRO
+            </li>
+            <li>
+                <label>Population:</label> POP
+            </li>
+            <li>
+                <label>Predominant Government:</label> GOVT<br>GOVTDESC
+            </li>
+            <li>
+                <label>Law Level:</label> LAW
+            </li>
+            <li>
+                <label>Tech Level:</label> TECH
+                <br>
+                TECHDESC
+            </li>
+            <li>
+                <label>Trade Classes:</label> TRADE
+            </ul>
+        </div>
+        <script>
+            JRPG.Methods.worldDataDisplay();
+        </script>
+    </body>
+</html>

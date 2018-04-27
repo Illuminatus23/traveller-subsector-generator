@@ -1,0 +1,354 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+ */
+
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* MY STYLES */
+body {
+	background-color: #fff;
+	padding: 10px;
+}
+#svgMapWrapper {
+	float: left;
+}
+#subsectorDataWrapper {
+	float: left;
+	min-width: 400px;
+	border: 1px #AFEEEE solid;
+	color: #AFEEEE;
+	font-family: 'Ubuntu Mono', Arial, Helvetica, sans-serif;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+#subsectorDataWrapper .informationRow {
+	clear: both;
+}
+#subsectorDataWrapper .title {
+	width: 250px;
+	float: left;
+	padding-left: 7px;
+}
+#subsectorDataWrapper .rightColField, #subsectorDataWrapper .leftColField {
+	height: 34px;
+	float: left;
+}
+#subsectorDataWrapper .leftColField {
+	width: 250px;
+	padding-left: 7px;
+}
+#subsectorDataWrapper .datafield {
+	padding-top: 12px;
+	padding-left: 6px;
+}
+#characterRank {
+	font-size: 0.5em !important;
+}
+#subsectorDataWrapper label {
+	position: absolute;
+	color: #CCCCCC;
+	font-size: 10px;
+}
+#subsectorDataWrapper h2 {
+	font-size: 1.45em;
+	font-weight: normal;
+	margin: 0.23em;
+}
+table#worldDataTable {
+	color: #FFFFFF;
+	font-family: 'Ubuntu Mono', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	width: 100%;
+	border-top: 3px solid #AFEEEE;
+}
+.dataTableRow {
+	padding-top: 15px;
+}
+
+table#worldDataTable td, table#worldDataTable th {
+	padding: 3px 0 3px 6px;
+	white-space:nowrap;
+}
+a.starSystemLink {
+	color: #AFEEEE;
+	text-decoration: none;
+}
+
+#characterSheet {
+	margin-left: 20px;
+	border-right: 2px solid #000000;
+	border-bottom: 2px solid #000000;
+	background-color: #FFFFFF;
+}
+
+#characterSheet .informationRow {
+	clear: both;
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+#characterSheet .col {
+	float: left;
+	border-left: 2px solid #000000;
+	min-height: 28px;
+}
+
+#characterSheet .col .gutter {
+	padding-left: 5px;
+}
+
+#characterSheet .leftColFieldThird {
+	width: 65%;
+}
+
+#characterSheet .rightColFieldThird {
+	width: 33%;
+}
+
+#characterSheet .leftColFieldQuarter {
+	width: 24%;
+}
+
+#characterSheet .leftColFieldHalf {
+	width: 48%;
+	padding-right: 2px;
+}
+
+#characterSheet .rightColFieldHalf {
+	width: 50%;
+}
+#characterSheet a {
+	color: #105CB6;
+	text-decoration: none;
+}
+#characterSheet .datafield {
+	font-size: 12px;
+	padding: 12px 0px 2px 20px;
+	line-height: 1em;
+	color: #FF0055;
+}
+
+#characterSheet label {
+	position: absolute;
+	color: #000000;
+	font-size: 10px;
+	padding-top: 2px;
+}
+#charFormWrapper label.longLabel {
+	width: 250px
+}
+.TitleFont {
+	font-size: 1.5em;
+	display: block;
+}
+.SubTitleFont {
+	font-size: 1.25em;
+	display: block;
+	margin-top: 1em;
+	font-weight: bold;
+}
+#characterSheet h2 {
+	font-size: 1.25em;
+	font-weight: normal;
+	margin: 0.23em;
+}
+.subSection {
+	margin-left: 20px;
+	display: none;
+}
+.step {
+	display: none;
+}
+#step1 {
+	display: block;
+}
+.formFieldWrapper {
+	clear: both;
+}
+.formFieldWrapper .formFieldWrapper {
+	margin-left: 150px;
+}
+#formWrapper, #charFormWrapper {
+	width: 45%;
+	float: left;
+	padding: 14px;
+	border: solid 2px #b7ddf2;
+	background: #ebf4fb;
+	border-radius: 8px;
+	min-width: 600px;
+	margin-bottom: 20px;
+}
+#characterSheet {
+	width: 45%;
+	float: left;
+	min-width: 600px;
+}
+#formWrapper h1, #formWrapper legend {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+#formWrapper p {
+	font-size: 11px;
+	color: #666666;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #b7ddf2;
+	padding-bottom: 10px;
+}
+#formWrapper label {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+	width: 140px;
+	float: left;
+}
+#formWrapper .small {
+	color: #666666;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+}
+#charFormWrapper .large {
+	font-size: 14px;
+	line-height: 1.5em;
+}
+#formWrapper input[type="text"], #formWrapper input[type="button"], #formWrapper button {
+	float: left;
+	font-size: 12px;
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	width: 200px;
+	margin: 2px 0 20px 10px;
+}
+.musterInput {
+	width: 30px;
+}
+#charFormWrapper h1, #charFormWrapper legend {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+#charFormWrapper p {
+	font-size: 11px;
+	color: #666666;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #b7ddf2;
+	padding-bottom: 10px;
+}
+#charFormWrapper label {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+	width: 140px;
+	float: left;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 4px 2px;
+}
+#charFormWrapper .small {
+	color: #666666;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+}
+#charFormWrapper .smallFull {
+	color: #666666;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: center;
+	clear: both;
+}
+#charFormWrapper #step4 .formFieldWrapper {
+	border: 1px #EBF4FB solid;
+	border-radius: 8px 8px 8px 8px;
+	background-color: #FFFFFF;
+	margin: 0 25px 10px;
+}
+#charFormWrapper #step4 .formFieldWrapper .formFieldWrapper {
+	border: 0;
+	width: 330px;
+	margin: 0;
+	float: right;
+}
+#charFormWrapper #step4 .formFieldWrapper .formFieldWrapper label {
+	float: left;
+	text-align: left;
+	line-height: 21px;
+}
+#charFormWrapper #step4 .formFieldWrapper .formFieldWrapper .small {
+	text-align: left;
+}
+#charFormWrapper #step4 .formFieldWrapper .formFieldWrapper input {
+	float: left;
+}
+#charFormWrapper input[type="text"], #charFormWrapper input[type="button"], #charFormWrapper button, #charFormWrapper .radioButtonWrapper, #skillSelectWrapper select {
+	float: left;
+	font-size: 12px;
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	width: 200px;
+	margin: 2px 0 20px 10px;
+}
+#charFormWrapper .radioButtonWrapper {
+	border: none;
+}
+.buttonWrapper {
+	clear: both;
+	font-size: 13px;
+}
+.careerReinlist, .CrosstrainWrapper {
+	display: none;
+}
+#skillSelectWrapper, #musterOutWrapper {
+	clear: both;
+	display: none;
+}
+.resolveStep {
+	float: right;
+}
+#charFormWrapper input[type="text"]:focus {
+	background-color: #FFFF00;
+}
+#charFormWrapper input[type="radio"] {
+	margin: 10px;
+}
+#log {
+	clear: both;
+	font-size: 10px;
+	overflow-y: scroll;
+	height: 100px;
+}
+.branchWrapper {
+	display: none;
+}
